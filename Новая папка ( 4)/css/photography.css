@@ -1,0 +1,88 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #1a1a1a, #2a2a2a);
+    color: #dcdcdc;
+    overflow-x: hidden;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #00d1d1;
+    border-bottom: 2px solid #00d1d1;
+}
+.drops-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    perspective: 1000px; /* Создаём эффект глубины */
+}
+.drop-card {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 35%; /* Уменьшено с 40% до 35% */
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; /* Обеспечиваем 3D-эффект */
+}
+.drop-card:hover {
+    transform: rotateY(10deg) rotateX(5deg) translateY(-5px); /* Наклоняем в 3D */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.cover-image, .thumbnail {
+    width: 100%; /* Устанавливаем размер */
+    aspect-ratio: 16 / 9; /* Сохраняем пропорции */
+    object-fit: cover; /* Масштабируем без обрезки */
+    transition: transform 0.5s ease;
+}
+.thumbnail {
+    width: 100px; /* Фиксированная ширина */
+    height: auto; /* Пропорциональная высота */
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00d1d1;
+}
+
+
+
+
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}

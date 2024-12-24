@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Verse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Применяем белый цвет текста ко всему */
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff; /* Устанавливаем белый цвет по умолчанию */
+          
+        }
+
+        /* Применяем шрифт Bebas Neue только к заголовку */
+        header h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 48px;
+            color: #fff; /* Белый цвет заголовка */
+        }
+
+        /* Стили текста в header */
+        header p {
+            font-size: 20px;
+            color: #fff; /* Белый цвет текста */
+        }
+
+        /* Стили для карточек категорий */
+        .category-card h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff; /* Белый цвет заголовков карточек */
+        }
+
+        .category-card p {
+            font-size: 18px;
+            color: #fff; /* Белый цвет текста карточек */
+        }
+
+        /* Стили кнопки в footer */
+        footer button {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff; /* Белый текст на кнопке */
+            border: none;
+            cursor: pointer;
+        }
+
+        footer button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Echo Verse</h1>
+        <p>Добро пожаловать на мое портфолио, данная версия сайта является школьным проектом.</p>
+    </header>
+    <main>
+        <section class="categories">
+            <div class="category-card">
+                <a href="photography.html">
+                    <img src="images/photography.jpg" alt="Photography">
+                    <h3>Мои фото</h3>
+                    <p>Делюсь своими фотографиями тут.</p>
+                </a>
+            </div>
+            <div class="category-card">
+                <img src="images/game-development.jpg" alt="Game Development">
+                <h3>Проект по разработке игр</h3>
+                <p>История о моем не совсем удачном опыте в данной сфере.</p>
+            </div>
+            <div class="category-card">
+                <img src="images/design.jpg" alt="Design">
+                <h3>Проекты Дизайна</h3>
+                <p>Мои ранние работы, сделанные на компьютере.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <button id="contact-button">Банжаев Ахмед</button>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/snowfall.js"></script>
+</body>
+</html>
